@@ -1,0 +1,402 @@
+.container{
+
+    width: 100vw;
+
+    height: 100vh;
+
+    position: relative;
+
+}
+
+.shadow{
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+
+    background-color: rgba(44, 62, 80,0.6);
+
+    z-index: 5;
+
+    animation: display 20s linear 10s infinite;
+
+}
+
+.horizon-context{
+
+    width: 100vw;
+
+    height: 50vh;
+
+    background-color: #3498db;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.road-context{
+
+    width: 100vw;
+
+    height: 40vh;
+
+    background-color: #34495e;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.line{
+
+    width: 100%;
+
+    height: 1px;
+
+    border: 5px dashed white;
+
+    position: absolute;
+
+    z-index: 2;
+
+}
+
+.bottom-context{
+
+    width: 100vw;
+
+    height: 10vh;
+
+    background-color: #e67e22;
+
+}
+
+/* mount */
+
+.m-1{
+
+    position: absolute;
+
+    height: 400px;
+
+    bottom: 0;
+
+    z-index: 1;
+
+}
+
+.m-2{
+
+    position: absolute;
+
+    height: 450px;
+
+    left: 650px;
+
+    bottom: 0;
+
+}
+
+.m-3{
+
+    position: absolute;
+
+    height: 400px;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: 1;
+
+}
+
+.sun{
+
+    width: 100px;
+
+    position: absolute;
+
+    right: 700px;
+
+    top: 50px;
+
+    /* top: 400px; */
+
+    animation: sunMove 20s linear infinite;
+
+}
+
+.moon{
+
+    width: 100px;
+
+    position: absolute;
+
+    top: 50px;
+
+    left: 800px;
+
+    /* top: 400px; */
+
+    animation: sunMove 20s linear 10s infinite;
+
+}
+
+.cloud-1{
+
+    width: 250px;
+
+    right: -250px;
+
+    position: absolute;
+
+    animation-name: cloudMove;
+
+    animation-timing-function: linear;
+
+    animation-duration: 15s;
+
+    animation-iteration-count: infinite;
+
+}
+
+.cloud-2{
+
+    width: 250px;
+
+    right: -250px;
+
+    position: absolute;
+
+    top: 50px;
+
+    animation: cloudMove 25s linear  infinite;
+
+}
+
+.cloud-3{
+
+    width: 250px;
+
+    right: -250px;
+
+    top: 150px;
+
+    position: absolute;
+
+    animation: cloudMove 35s linear  infinite;
+
+}
+
+.bird-set{
+
+    position: relative;
+
+    top: 50px;
+
+    height: 250px;
+
+    width: 350px;
+
+    animation: birdMove 10s linear  infinite;
+
+}
+
+.b-1{
+
+    width: 100px;
+
+    position: absolute;
+
+}
+
+.b-2{
+
+    width: 100px;
+
+    position: absolute;
+
+    bottom: 0;
+
+}
+
+.b-3{
+
+    width: 100px;
+
+    position: absolute;
+
+    right: 0;
+
+    top: 50px;
+
+}
+
+.vehicle{
+
+    position: relative;
+
+    width: 400px;
+
+    height: 250px;
+
+    top: -120px;
+
+    animation: birdMove 20s linear  infinite;
+
+}
+
+.car-box{
+
+    height: 250px;
+
+    position: absolute;
+
+    bottom: 0;
+
+
+}
+
+.wheel-1{
+
+    width: 65px;
+
+    position: absolute;
+
+    bottom:40px;
+
+    left: 35px;
+
+    animation: rotate 1s linear infinite;
+
+}
+
+.wheel-2{
+
+    width: 65px;
+
+    position: absolute;
+
+    bottom:40px;
+
+    right: 98px;
+
+    animation: rotate 1s linear infinite;
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform: rotate(0);
+
+    }
+
+    to{
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* mount */
+
+@keyframes birdMove{
+
+    from{
+
+        left: -350px;
+
+    }
+
+    to{
+
+        left: 2000px;
+
+    }
+
+}
+
+@keyframes cloudMove{
+
+    from{
+
+        right: -250px;
+
+    }
+
+    to{
+
+        right: 1900px;
+
+    }
+
+}
+
+@keyframes sunMove{
+
+    0%{
+
+        top: -10px;
+
+    }
+
+    10%{
+
+        top: 100px;
+
+    }
+
+    90%{
+
+        top: 500px;
+
+    }
+
+    100%{
+
+        top: -10px;
+
+    }
+
+}
+
+@keyframes display{
+
+    0%{
+
+        display: block;
+
+    }
+
+    10%{
+
+        display: none;
+
+    }
+
+    90%{
+
+        display: none;
+
+    }
+
+    100%{
+
+        display: block;
+
+    }
+
+}
